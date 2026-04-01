@@ -6,7 +6,7 @@ const path = require('path');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const { sanitize } = require('./sanitize');
-const { config, maskSecret } = require('./config');
+const { config } = require('./config');
 
 const argv = yargs(hideBin(process.argv))
   .usage('Usage: $0 --input <file> --output <file>')
@@ -43,7 +43,7 @@ function run() {
 
   if (argv.verbose) {
     console.log(`[pendoc-llm] provider : ${config.modelProvider}`);
-    console.log(`[pendoc-llm] api key  : ${maskSecret(config.apiKey)}`);
+    console.log(`[pendoc-llm] api key  : ${config.apiKey ? 'configured' : 'not set'}`);
     console.log(`[pendoc-llm] reading  : ${inputPath}`);
   }
 
