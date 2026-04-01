@@ -92,14 +92,6 @@ The `MODEL_PROVIDER` value of `mock` keeps the tool fully offline; no real API c
 
 ---
 
-## Security
-
-> ⚠️ **All credentials in this repository are dummy values intended solely for testing and CTF demonstration purposes.**
->
-> The `PAID_SERVICE_API_KEY` committed in `.env` is a placeholder flag string — it is **not** a real API key for any paid service, and it will not authorize any real requests.  Never commit real secrets to source control.
-
----
-
 ## Project Structure
 
 ```
