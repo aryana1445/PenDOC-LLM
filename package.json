@@ -1,0 +1,35 @@
+{
+  "name": "pendoc-llm",
+  "version": "0.1.0",
+  "description": "CLI tool that sanitizes and normalizes text documents for LLM ingestion",
+  "main": "src/cli.js",
+  "bin": {
+    "pendoc-llm": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node ./src/cli.js",
+    "lint": "eslint src test",
+    "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\"",
+    "test": "jest --coverage"
+  },
+  "keywords": ["llm", "sanitize", "markdown", "cli", "text-processing"],
+  "author": "PenDOC-LLM Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.js"]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
